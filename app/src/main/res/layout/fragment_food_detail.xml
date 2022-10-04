@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="choosenFood"
+            type="com.said.foodbookkotlinexample.model.Food" />
+        
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FoodDetailFragment">
+
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:downloadImage="@{choosenFood.foodImage}"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodName"
+        android:layout_below="@id/foodImage"
+        android:text="@{choosenFood.foodName}"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodCalory"
+        android:layout_below="@id/foodName"
+        android:text="@{choosenFood.foodCalory}"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodCarb"
+        android:layout_below="@id/foodCalory"
+        android:text="@{choosenFood.foodCarb}"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodProtein"
+        android:layout_below="@id/foodCarb"
+        android:text="@{choosenFood.foodProtein}"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodOil"
+        android:layout_below="@id/foodProtein"
+        android:text="@{choosenFood.foodOil}"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="7dp"/>
+
+
+
+
+</RelativeLayout>
+</layout>
